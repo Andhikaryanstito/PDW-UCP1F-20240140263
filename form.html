@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community | Daftar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="navbar glass-panel" style="border-radius: 0; border-top: none; border-left: none; border-right: none;">
+        <a href="./index.html" class="navbar-brand">Tech <span class="text-gradient">Community</span></a>
+        <ul class="nav-links">
+            <li><a href="./index.html">Beranda</a></li>
+            <li><a href="./form.html" class="active">Daftar Anggota</a></li>
+            <li><a href="./gallery.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="glass-panel form-container">
+            <h2 class="text-center text-gradient" style="margin-bottom: 25px;">Form Registrasi</h2>
+            
+            <form id="formDaftar">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" class="form-control" id="inputNama" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Alamat Email</label>
+                    <input type="email" class="form-control" id="inputEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Bidang Minat</label>
+                    <select class="form-control" id="inputMinat" required>
+                        <option value="" disabled selected>Pilih minat...</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Network Engineering">Network Engineering</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-blue" style="margin-top: 15px;">Submit Data</button>
+                <a href="./index.html"><button type="button" class="btn btn-outline">Kembali ke Beranda</button></a>
+            </form>
+
+            <div id="hasilInput" class="glass-panel"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

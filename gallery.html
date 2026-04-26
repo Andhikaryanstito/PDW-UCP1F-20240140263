@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Community | Multimedia</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="navbar glass-panel" style="border-radius: 0; border-top: none; border-left: none; border-right: none;">
+        <a href="./index.html" class="navbar-brand">Tech <span class="text-gradient">Community</span></a>
+        <ul class="nav-links">
+            <li><a href="./index.html">Beranda</a></li>
+            <li><a href="./form.html">Daftar Anggota</a></li>
+            <li><a href="./gallery.html" class="active">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="text-center">
+            <h1>Galeri & <span class="text-gradient">Multimedia</span></h1>
+        </div>
+        
+        <div class="gallery-grid">
+            
+            <div class="card glass-panel">
+                <h3 style="font-size: 1.1rem; color: #4facfe;">Kecerdasan Buatan (AI)</h3>
+                <img id="fotoGaleri" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&q=80" class="media-custom" alt="Visual AI" onclick="bukaPreview(this.src)" title="Klik untuk memperbesar">
+                <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 15px;">Ilustrasi konsep machine learning.</p>
+                <button class="btn btn-blue" onclick="bukaPreview(document.getElementById('fotoGaleri').src)">Lihat Gambar</button>
+            </div>
+
+            <div class="card glass-panel">
+                <h3 style="font-size: 1.1rem; color: #fbc2eb;">Tech Video Session</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/_FcHPrRY5zg" title="Tech Video" allowfullscreen></iframe>
+                </div>
+                <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 15px;">Diskusi terkait miskonsepsi seputar AI.</p>
+                <button class="btn btn-purple" onclick="alert('Video ini membahas potensi dan miskonsepsi seputar AI.')">Info Video</button>
+            </div>
+
+            <div class="card glass-panel">
+                <h3 style="font-size: 1.1rem; color: #38ef7d;">Audio Komunitas</h3>
+                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&q=80" class="media-custom" alt="Cover Music" style="filter: brightness(0.7);">
+                <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 15px;">Pastikan file Phonk123.mp3 ada di folder.</p>
+                
+                <audio id="audioGaleri" src="./Phonk123.mp3"></audio>
+                
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-green" onclick="playLagu()">Play</button>
+                    <button class="btn btn-red" onclick="pauseLagu()">Pause</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="tutupPreview()">&times;</span>
+        <img class="modal-content" id="imgPreviewUrl" alt="Preview Gambar Besar">
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
